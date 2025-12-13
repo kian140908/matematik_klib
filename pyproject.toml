@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "matematik_klib"
-version = "0.1.0"
+version = "0.1.1"
 description = "A small math library with polynomial solvers and power/root functions"
 authors = [{name = "Kian William Nørgaard Sørensen", email = "kianersej12345@gmail.com"}]
 requires-python = ">=3.9"
@@ -19,3 +19,8 @@ classifiers = [
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
+
+[project.urls]
+Repository = "https://github.com/kian140908/matematik_klib"
+Documentation = "https://github.com/kian140908/matematik_klib/wiki"
+Issues = "https://github.com/kian140908/matematik_klib/issues"
