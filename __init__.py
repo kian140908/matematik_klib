@@ -117,7 +117,7 @@ class Areal:
         if bredde is None:
             hob, bredde = hojde_or_lengde_or_liste
         else:
-            hojde_or_lengde_or_liste = hob
+            hob = hojde_or_lengde_or_liste
         return hob * bredde
     @staticmethod
     def cirkel(radius: float) -> float:
@@ -146,7 +146,7 @@ class Areal:
         if bredde is None:
             hojde, bredde = hojde_or_liste
         else:
-            hojde_or_liste = hojde
+            hojde = hojde_or_liste
         return (hojde*bredde)/2
 
 # ------------------ ALIASES ------------------
