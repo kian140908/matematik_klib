@@ -85,3 +85,45 @@ class Polynomier:
 
     @overload
     def tredjegrads(self, liste: Sequence[float]) -> Tuple[float, float, float]: ...
+
+class Areal:
+    @overload
+    def firkant(self, hojde_or_lengde_or_liste: float, bredde: float) -> float:
+        """Finder arealet af en kvadrat ud fra højde og bredde.
+            
+        Args:
+            hojde_or_lengde_or_liste (float | Sequence[float]): liste eller højde/længde.
+            bredde (float | ikke opligatioisk): bredden skal ikke skrves for sig selv hvis der bruges 1 liste.
+        Returns:
+            float: areal i cm^2.
+        """ 
+        ...
+    @overload
+    def firkant(self, hojde_or_lengde_or_liste: Sequence[float], bredde: None=None) -> float: ...
+    @overload
+    def cirkel(self, radius: float) -> float:
+        """
+        finder arealet af en cirkel ud fra radius.
+
+        Args:
+            radius (float): er radiusen af cirklen du vil finde arealet på.
+        Returns:
+            float: areal i cm^2 er ikke helt precis da pi er taget med udgangspunkt i at det er 3,14159.
+        """
+        ...
+    @overload
+    def retvinklet_trekant(hojde_or_liste: float, bredde: float) -> float:
+        """
+        finder arealet af en Retvinklet trekant.
+
+        Args:
+            hojde_or_liste (float | Sequence[float]): 
+                - højden af trekanten.
+                - liste med højde, bredde.
+            bredde (float | ikke opligatiorisk): er bredden af trekanten.
+        Returns:
+            float: areal i cm^2
+        """
+        ...
+    @overload
+    def retvinklet_trekant(hojde_or_liste: Sequence[float],bredde: None=None) -> float: ...

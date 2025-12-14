@@ -103,6 +103,51 @@ def nrod(radikanden_or_list: float | Sequence[float], rodeksponent: float | None
     else:
         radikanden = radikanden_or_list
     return radikanden ** (1/rodeksponent)
+class Areal:
+    @staticmethod
+    def firkant(hojde_or_lengde_or_liste: float | Sequence[float], bredde: float | None=None) -> float:
+        """Finder arealet af en kvadrat ud fra højde og bredde.
+            
+        Args:
+            hojde_or_lengde_or_liste (float | Sequence[float]): liste eller højde/længde.
+            bredde (float | ikke opligatioisk): bredden skal ikke skrves for sig selv hvis der bruges 1 liste.
+        Returns:
+            float: areal i cm^2.
+        """
+        if bredde is None:
+            hob, bredde = hojde_or_lengde_or_liste
+        else:
+            hojde_or_lengde_or_liste = hob
+        return hob * bredde
+    @staticmethod
+    def cirkel(radius: float) -> float:
+        """
+        finder arealet af en cirkel ud fra radius.
+
+        Args:
+            radius (float): er radiusen af cirklen du vil finde arealet på.
+        Returns:
+            float: areal i cm^2 er ikke helt precis da pi er taget med udgangspunkt i at det er 3,14159.
+        """
+        return ((radius**2)*3.14159)
+    @staticmethod
+    def retvinklet_trekant(hojde_or_liste: float | Sequence[float], bredde: float | None=None) -> float:
+        """
+        finder arealet af en Retvinklet trekant.
+
+        Args:
+            hojde_or_liste (float | Sequence[float]): 
+                - højden af trekanten.
+                - liste med højde, bredde.
+            bredde (float | ikke opligatiorisk): er bredden af trekanten.
+        Returns:
+            float: areal i cm^2
+        """
+        if bredde is None:
+            hojde, bredde = hojde_or_liste
+        else:
+            hojde_or_liste = hojde
+        return (hojde*bredde)/2
 
 # ------------------ ALIASES ------------------
 
